@@ -18,10 +18,11 @@ The curriculum source is [Исправленный план обучения AI-
 
 Before making any change, an AI agent must read these files in order:
 
-1. `AGENTS.md`
-2. `docs/LEARNING_STATE.md`
-3. `docs/DECISIONS.md`
-4. this file
+1. `docs/HANDOFF.md`
+2. `AGENTS.md`
+3. `docs/LEARNING_STATE.md`
+4. `docs/DECISIONS.md`
+5. this file
 
 The agent must continue from the current learning step, not jump ahead. The student completes one step before the next is given.
 
