@@ -1,12 +1,12 @@
 # Learning State
 
-Last updated: 2026-09-19
+Last updated: 2026-09-20
 
 ## Current Stage
 
-- Curriculum: Week 0, environment preparation.
-- Current task: decide whether to perform the first real push to GitHub.
-- Next curriculum task after the push decision: publish the committed baseline only after explicit approval, then verify the remote branch.
+- Curriculum: Week 1, Python basics and first agent workflow.
+- Current task: record the verified introductory JSON-validation prototype and prepare its changes for the next Git commit.
+- Next curriculum task: decide the next small Week 1 learning task after the prototype is committed. Do not expand the prototype's scope without a complete task description.
 - The dependency-manager choice is deferred to Week 2, after the student has learned the relevant concepts from the textbook.
 - The textbook supports Weeks 1–4 in depth and selected material from Weeks 5 and 17–19; it is not restricted to Weeks 1–4.
 
@@ -25,6 +25,11 @@ Last updated: 2026-09-19
 - Configured the `origin` remote as `https://github.com/Nevski47/Project-AI.git`.
 - Verified GitHub reachability with `git ls-remote origin` and exit code `0`; the remote repository is currently empty.
 - Verified with `git push --dry-run origin master` that GitHub accepts the current credentials and would create the remote `master` branch; no data was uploaded.
+- Published the repository successfully to GitHub: remote branch `master` points to commit `ecb36b3692a3e0c27bbe452252e8b835b0aaa9bf`.
+- Read the course textbook through Section 2, Chapter 5, then studied external-file reading and JSON loading, validation, modification, and serialization in Section 3, Chapter 2.
+- Created `docs/week1-spec.md` with the intended behavior of the JSON-validation CLI.
+- Created and ran `app/main.py`, an introductory prototype that reads `Members.json`, validates `id`, `firstName`, and `lastName`, skips invalid employee records, and prints a cleaned list without `salary`.
+- Verified the prototype against three deliberately invalid employee records: a non-string `firstName`, a whitespace-only `firstName`, and a whitespace-only `id`. It reported records 1, 3, and 7 and emitted seven cleaned employee records.
 - Created the transfer documents: `README.md`, `AGENTS.md`, this file, and `docs/DECISIONS.md`.
 - Strengthened `AGENTS.md` with explicit pedagogical-integrity rules: evidence before completion, no automatic agreement, no premature solutions, and clear separation of facts from assumptions.
 
@@ -51,17 +56,25 @@ Last updated: 2026-09-19
 
 - `Исправленный план обучения AI-инженерии на 52 недели.md` - source curriculum.
 - `.gitignore` - local-file exclusion rules.
-- `README.md` - project entry point.
+- `README.md` - project entry point and current prototype run command.
 - `AGENTS.md` - AI agent contract.
 - `docs/HANDOFF.md` - concise transfer packet and first-response instructions for the next AI teaching agent.
 - `docs/DECISIONS.md` - documented decisions.
-- Project folders are empty; no application code, dependencies, `pyproject.toml`, tests, or lock file exist yet.
+- `docs/week1-spec.md` - Week 1 JSON CLI specification.
+- `Members.json` - local input data for the introductory prototype; it currently contains deliberate invalid values used for manual validation checks.
+- `app/main.py` - introductory JSON-validation prototype.
+- There are no external dependencies, `pyproject.toml`, tests, or lock file yet.
 
 ## GitHub Status
 
 - The user has a GitHub profile: `Nevski47`.
 - This local repository has `origin` configured as `https://github.com/Nevski47/Project-AI.git`.
-- Read-only access to the remote is verified; push authentication and permission still require a separate dry-run check.
+- Read and push access are verified. The initial baseline and handoff commit were published to the remote `master` branch.
+
+## Current Working Tree
+
+- The working tree contains uncommitted updates to `AGENTS.md` and new files for Week 1 (`Members.json`, `app/main.py`, and `docs/week1-spec.md`).
+- Verify `git status` before creating the next commit. Do not commit temporary or sensitive input data without reviewing it first.
 
 ## Update Rules
 

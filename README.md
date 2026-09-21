@@ -36,8 +36,20 @@ Activate it in PowerShell from the repository root:
 .\.venv\Scripts\Activate.ps1
 ```
 
-The project does not yet have dependencies, a package manager configuration, or runnable code. Commands for installation, tests, linting, and type checking will be added when those tools are deliberately introduced.
+The project does not yet have external dependencies, a package manager configuration, tests, linting, or type checking. Those tools will be added when they are deliberately introduced in the curriculum.
+
+## Current Prototype
+
+`app/main.py` is an introductory JSON-processing prototype. It reads `Members.json` from the repository root, validates employee fields `id`, `firstName`, and `lastName`, skips invalid employee records, and prints a cleaned result without `salary`.
+
+Run it from the repository root:
+
+```powershell
+.\.venv\Scripts\python.exe .\app\main.py
+```
+
+The current prototype is intentionally limited: it has no command-line file argument, automated tests, or handling for malformed JSON. These are future learning tasks.
 
 ## Repository Status
 
-The current practical stage is Week 0, environment preparation. The detailed and authoritative progress record is in `docs/LEARNING_STATE.md`.
+The current practical stage is Week 1, Python and a first JSON-validation prototype. The detailed and authoritative progress record is in `docs/LEARNING_STATE.md`.
