@@ -33,7 +33,7 @@ Python 3.13 is used through a local virtual environment.
 Activate it in PowerShell from the repository root:
 
 ```powershell
-.\.venv\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1
 ```
 
 The project does not yet have external dependencies, a package manager configuration, tests, linting, or type checking. Those tools will be added when they are deliberately introduced in the curriculum.
@@ -45,7 +45,7 @@ The project does not yet have external dependencies, a package manager configura
 Run it from the repository root:
 
 ```powershell
-.\.venv\Scripts\python.exe .\app\main.py
+& .\venv\Scripts\python.exe .\app\main.py
 ```
 
 The current prototype is intentionally limited: it has no command-line file argument, automated tests, or handling for malformed JSON. These are future learning tasks.

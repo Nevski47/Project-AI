@@ -1,12 +1,12 @@
 # Learning State
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
 
 ## Current Stage
 
 - Curriculum: Week 1, Python basics and first agent workflow.
-- Current task: record the verified introductory JSON-validation prototype and prepare its changes for the next Git commit.
-- Next curriculum task: decide the next small Week 1 learning task after the prototype is committed. Do not expand the prototype's scope without a complete task description.
+- Current task: the introductory JSON-validation prototype and virtual-environment review are verified.
+- Next curriculum task: study a short external introduction to `pyproject.toml`, then explain its purpose before making any project configuration. Do not expand the prototype's scope without a complete task description.
 - The dependency-manager choice is deferred to Week 2, after the student has learned the relevant concepts from the textbook.
 - The textbook supports Weeks 1–4 in depth and selected material from Weeks 5 and 17–19; it is not restricted to Weeks 1–4.
 
@@ -19,8 +19,8 @@ Last updated: 2026-09-20
 - Configured the user's Git author identity on this PC as `Nevski47` with the email supplied by the user.
 - Created `.gitattributes` to store text files in Git with LF line endings, so the history remains consistent across both Windows PCs.
 - Created the directories `app/`, `tests/`, `evals/`, `docs/`, and `scripts/`.
-- Created and activated `.venv` using Python's built-in `venv` module.
-- Verified that the active interpreter is `.venv\Scripts\python.exe`.
+- Created and activated `venv` using Python's built-in `venv` module.
+- Verified that the interpreter is `venv\Scripts\python.exe` and uses Python 3.13.15.
 - Created `.gitignore` that excludes virtual environments, Python bytecode, tool caches, and `.env` secrets while allowing `.env.example`.
 - Configured the `origin` remote as `https://github.com/Nevski47/Project-AI.git`.
 - Verified GitHub reachability with `git ls-remote origin` and exit code `0`; the remote repository is currently empty.
@@ -32,6 +32,7 @@ Last updated: 2026-09-20
 - Verified the prototype against three deliberately invalid employee records: a non-string `firstName`, a whitespace-only `firstName`, and a whitespace-only `id`. It reported records 1, 3, and 7 and emitted seven cleaned employee records.
 - Created the transfer documents: `README.md`, `AGENTS.md`, this file, and `docs/DECISIONS.md`.
 - Strengthened `AGENTS.md` with explicit pedagogical-integrity rules: evidence before completion, no automatic agreement, no premature solutions, and clear separation of facts from assumptions.
+- Read the textbook subsection on virtual-environment management and correctly explained why a project uses `venv` and why it is excluded from Git.
 
 ## Current PC Capabilities
 
@@ -39,7 +40,7 @@ Last updated: 2026-09-20
 | --- | --- | --- |
 | Python | Ready | Python 3.13.15 |
 | Git | Ready | Git 2.55.0.windows.5 |
-| Virtual environment | Ready | `.venv` is created |
+| Virtual environment | Ready | `venv` is created and verified with Python 3.13.15 |
 | WSL2 | Unavailable | Installation requires administrator rights |
 | Docker CLI | Installed | Docker 29.8.0 client is available |
 | Docker Engine | Unavailable | Docker Desktop cannot start because virtualization support is not detected |
@@ -73,8 +74,9 @@ Last updated: 2026-09-20
 
 ## Current Working Tree
 
-- The working tree contains uncommitted updates to `AGENTS.md` and new files for Week 1 (`Members.json`, `app/main.py`, and `docs/week1-spec.md`).
-- Verify `git status` before creating the next commit. Do not commit temporary or sensitive input data without reviewing it first.
+- Commit `8b3ac30 feat: add JSON validation prototype` is published to `origin/master`.
+- Before this documentation update, the working tree contained a user change from `.venv/` to `venv/` in `.gitignore` and an untracked, empty `requirements.txt`.
+- Verify `git status` before the next commit. Do not commit temporary, empty, or sensitive files without reviewing their purpose first.
 
 ## Update Rules
 
